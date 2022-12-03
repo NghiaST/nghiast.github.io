@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <style>
+            #board {
+                position : fixed;
+                left : 530px;
+                top : 170px;
+                width : 321px;
+                height : 321px;
+                background-color: blue;
+                text-align: center;
+                border : 3px solid black;
+            }
+            #snake {
+                position : fixed;
+                left : 530px;
+                top : 170px;
+                width : 25px;
+                height : 25px;
+                background-color: yellowgreen;
+                border: 1px solid gray;
+            }
+            #inp {
+                position: fixed;
+                left : 530px;
+                top : 100px;
+                width : 324px;
+            }
+            #inp2 {
+                color : blue;
+            }
+            #newgame {
+                position: fixed;
+                left : 650px;
+                top : 130px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "board"></div>
+        <div id = "snake"></div>
+        <div id = "speed" style = "left : 400px; top : 300px"> Speed : 100 </div>
+        <p> 
+            Change Speed 
+            <input id = "input_text" type = "text" style = "width : 40px"> </input>
+        </p>
+        <button id = "newgame" onclick = "NewGame()"> New Game </button>
+
+        <p id = "123"> Timer Alive : 0 </p>
+        <p id = "inp2"> aaaa </p>
+
+        <script>
+            document.getElementById("input_text").addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) ChangeSpeed();
+            });
+        </script>
+
+        <script>
+            document.onkeypress = function(evt) {
+                evt = evt || window.event;
+                var charCode = evt.keyCode || evt.which;
+                var charStr = String.fromCharCode(charCode);
+                document.getElementById("inp2").innerHTML = charStr;
+                if (charStr == "p") NewGame();
+                else Process();
+            };
+        </script>
+
+        <script>
+            let speed = 20;
+            document.getElementById("input_text").value = speed;
+            function ChangeSpeed() {
+                speed = document.getElementById("input_text").value;
+                document.getElementById("speed").innerHTML = "Speed : " + speed;
+            }
+        </script>
+
+        <script>
+            let rootx = 530;
+            let rooty = 170;
+            let xx = 150;
+            let yy = 150;
+            let stop = 1;
+            let score = 0;
+            let direct;
+            let loop;
+            let timer;
+            Reset();
+            function Reset() {
+                clearInterval(loop);
+                timer = 0;
+                score = 0;
+                stop = 0;
+                xx = 150;
+                yy = 150;
+                document.getElementById("snake").style.left = rootx + xx + "px";
+                document.getElementById("snake").style.top = rooty + xx + "px";
+                direct = "d";
+                document.getElementById("inp2").innerHTML = "Test";
+            }
+            
+            function goLeft() {
+                xx -= 25;
+                document.getElementById("snake").style.left = rootx + xx + "px";
+            }
+            function goRight() {
+                xx += 25;
+                document.getElementById("snake").style.left = rootx + xx + "px";
+            }
+            function goUp() {
+                yy -= 25;
+                document.getElementById("snake").style.top = rooty + yy + "px";
+            }
+            function goDown() {
+                yy += 25;
+                document.getElementById("snake").style.top = rooty + yy + "px";
+            }
+            function CheckDie() {
+                if (xx <= -800) xx += 1700;
+                if (xx > 900) xx -= 1700;
+                if (yy <= -400) yy += 900;
+                if (yy > 500) yy -= 900;
+            }
+            function goDirect() {
+                if (direct == "a") goLeft();
+                if (direct == "d") goRight();
+                if (direct == "w") goUp();
+                if (direct == "s") goDown();
+            }
+            function Process() {
+                if (stop) return;
+                let tmp = document.getElementById("inp2").innerHTML;
+                if (tmp == "a" || tmp == "d" || tmp == "w" || tmp == "s") direct = tmp;
+            }
+            function Play() {
+                ++timer;
+                document.getElementById("123").innerHTML = "Timer Alive : " + timer;
+                goDirect();
+                CheckDie();
+            }
+            function NewGame() {
+                if (stop == 1) return;
+                Reset();
+                loop = setInterval(Play, speed);
+            }
+        </script>
+    </body>
+</html>

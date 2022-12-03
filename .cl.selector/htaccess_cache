@@ -1,0 +1,9 @@
+[/home/luoqzunm/public_html]
+htaccess_list = /home/luoqzunm/public_html/.htaccess
+
+[/home/luoqzunm/public_html/con01]
+htaccess_list = 
+
+[/home/luoqzunm/public_html/con02]
+htaccess_list = /home/luoqzunm/public_html/con02/forbidden/.htaccess,/home/luoqzunm/public_html/con02/data/.htaccess,/home/luoqzunm/public_html/con02/A_HS_Task/.htaccess,/home/luoqzunm/public_html/con02/.htaccess
+

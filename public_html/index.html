@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <title> ALL </title>
+    <base target="_blank">
+    <link rel="icon" type="image/x-icon" id="rel-icon">
+    <style>
+        body {
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: red;
+            font-size: 200%;
+        }
+
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(0, 191, 255);
+        }
+
+        a:hover {
+            color: rgb(0, 225, 255);
+        }
+
+        a:active {
+            color: rgb(255, 255, 100);
+        }
+
+        img {
+            float: left;
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: 150%;
+        }
+        
+        .tmp0 {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            color: rgb(60, 250, 40);
+        }
+
+        h1 {
+            position: sticky;
+            top: 0;
+            text-align: center;
+            font-family: Brush Script MT;
+            font-size: 500%;
+            color: rgb(182, 223, 3);
+        }
+
+        h1:hover {
+            color: pink;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: rgb(231, 193, 21);
+            font-weight: bold;
+            border: none;
+            color: red;
+            padding: 5px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px 2px;
+            cursor: pointer;
+        }
+        
+        .button_cbl {
+            background-color: rgb(21, 200, 231);
+            font-weight: bold;
+            border: none;
+            color: red;
+            padding: 3px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls autoplay class = "tmp0">
+        <source src = "https://saost.tk/Musics/chua_bao_gio.mp3"> 
+    </audio>
+
+    <h1 id = "CColor">
+        from SaoST (IOI) with love
+    </h1>
+    
+    <h2>
+        <a id="link0"> 14.227.5.193:81 </a>
+        <img id="icon0" />
+        <br />
+        <a id="link1"> Learning Language </a>
+        <img id="icon1" />
+        <br />
+        <a id="link2"> Codeforces </a>
+        <img id="icon2" />
+        <br />
+        <a id="link3"> Youtube </a>
+        <img id="icon3" />
+        <br />
+        <a id="link4"> Facebook </a>
+        <img id="icon4" />
+        <br />
+        <a id="link5"> Gmail </a>
+        <img id="icon5" />
+        <br />
+        <a id="link6"> VNOJ </a>
+        <img id="icon6" />
+        <br />
+        <a id="link7"> LQDOJ </a>
+        <img id="icon7" />
+        <br />
+        <a id="link8"> DDNS </a>
+        <img id="icon8" />
+        <br />
+        <a href = "https://translate.google.com/?hl=vi" style = "color: yellowgreen"> Google Translate </a>
+    </h2>
+    
+    <p style = "font-weight: bold; color : rgb(230, 82, 24)">
+        Student CBL :
+        <button class = "button_cbl" onclick = 'openNewTab("https://saost.tk/cbl_Khoa7.pdf")'> K7 </button>
+        +
+        <button class = "button_cbl" onclick = 'openNewTab("https://saost.tk/cbl_Khoa8.pdf")'> K8 </button>
+        +
+        <button class = "button_cbl" onclick = 'openNewTab("https://saost.tk/cbl_Khoa9.pdf")'> K9 </button>
+        <br />
+    </p>
+
+    <h2>
+        <a href="https://gspvh21.contest.codeforces.com/group/ABXsSubxJG/contests" style="font-size:130%;color:yellow"> GSPVH
+        </a>
+        <br />
+        <a href="https://drive.google.com/drive/folders/1dmb8PLfVfeZhzieaEeF1QIe0WVpOFzzo"> FILE-PVH
+        </a>
+    </h2>
+
+    <p style = "font-weight: bold; color : rgb(236, 65, 170)">
+        Random VNOJ : 
+        <button class = "button" onclick = "vnoj_random(0.01, 0.50)"> 0.01 - 0.50
+        </button>
+        +
+        <button class = "button" onclick = "vnoj_random(0.51, 1.00)"> 0.51 - 1.00
+        </button>
+        +
+        <button class = "button" onclick = "vnoj_random(1.01, 1.50)"> 1.01 - 1.50
+        </button>
+        +
+        <button class = "button" onclick = "vnoj_random(1.51, 2.00)"> 1.51 - 2.00
+        </button>
+    </p>
+
+    <p>
+    	<a href="https://olympiads.ru/team/archive/2021.html"  style="color:green"> OLYMPIAD Russia </a>
+    </p>
+
+    <p>
+        <a href = "https://saost.tk/Training_HTML"> TraningHTML </a>
+    </p>
+
+    <script>
+        function openNewTab(linking) {
+            window.open(linking);
+        }
+        function vnoj_random(x, y) {
+            openNewTab("https://oj.vnoi.info/problems/random/?search=&hide_solved=1&category=&point_start=" + x + "&point_end=" + y);
+        }
+    </script>
+  
+    <script>
+    	let icon_rye = "https://blogger.googleusercontent.com/img/a/AVvXsEhRXdC2TKVgDMUsmJNuNSX7wtLGvGatnfEqZbuWuOMp3kbml8dlGUNBYmlBBpLyTIshwYrowWkrT_Ie-EoVkXGbMjH5GiXAVb-lvbYo6-ybiHl2p26dVgI0RSkxl_Dlo-dIaDa4WjBe7SeCMMbSgzhjUra5vbQJyvcwer8P2FkZbCjGUKg39zttQ4XJ=s800";
+
+		let icon_book = "https://blogger.googleusercontent.com/img/a/AVvXsEiJ0Gcuyk3Gsv1NHsh-e7mvmZKkgv4Pe30hHAycgLVFGbLPfY7N0suIHSz5NEljoBZnf8DV0c64efFJfcvq1xLjpB1SFX-X_PfaiKM3NcrzifKwtbgJGG3TYJ1fUJ3KS6uYkGmyLeKNk0I04P4njiU7YMPhGmbK1TrUk54dhKw-vYYQptLqYj-mBn2l=s612";
+
+		let icon_codeforces = "https://blogger.googleusercontent.com/img/a/AVvXsEjwnUfWYmtmlzJKgZYHtG2s4yuS0dDU9BMQ3ttCQUf1Sln_HWJW9RY3DVLojdWJ45ajuJ_yo1FpJMbOt0DGOLRl3jjIYxCEh6ogbyPFRRRLP6kM__acjxbO-21kZ-7V6Rugi7CTufoahbQ6lxn8lY6HkpAY97Kt05vOQujhjxdbglT_KzSmtj8zmJBW=s256";
+
+        let icon_facebook = "https://blogger.googleusercontent.com/img/a/AVvXsEg3V9_RoBLyJFxBpzBgaoJ2mds6USJKolZm6Nzv4ygsGJfM5yeKconqH_P23YwndlRotyt4Ly5VFVrqZF92T0xX5zQcC4N3jXogvelTlcSGaBq5anJLULz31L0pdJNrHKaH3qahJNlU_f6TVZTFrg3N7bvKz57EwcuXYgIX3_kueCUSQSdLVUlWzE8h=s225";
+
+    	let icon_favicon = "https://blogger.googleusercontent.com/img/a/AVvXsEj3KZMnAQbZlAstqpstepAqkDiL9LINfmjgqDZf8YhqWyEoRWLezjvIgt08-7fG1NbUaXcC0tsRXZRFHoSsDXxGjYKLT-n3B4vBOzdEGpAxMiPXE9UZ3FgnnwZr0ECgBepV16YJD3vQ0xueiixSbRi-2Mjp8pLg3gaGoU7tMKOC2J-J_apo44ZruKKS=s16";
+
+    	let icon_gmail = "https://blogger.googleusercontent.com/img/a/AVvXsEhZdYp5j1ko3S8FPg_B38O2HfD0Mtb7vjsknf-Q72DSpCoORQambXYy6QPR7EmAm7vpoKsoX8zQCngaSoHgEiiHrAtnzuvP0hLvbri9Dd6eDGj6yHd9iGCbn2iEe1sNfl7qt0fA8ynxT0Hi4LpxqaHD-x6HMBTvXSKG8qrsMzb6-bRnUtuVbIn_Y7yB=s200";
+
+    	let icon_lqdoj = "https://blogger.googleusercontent.com/img/a/AVvXsEgFNohwSFf7vCCoZASnyQ3gOQPCyp-wJE0_qEfugvFguwcp6QqxeQvvyMs0MGDmqIG1GFkf8xpwkaAKUWznhcNZMxJmcVGIFJ4vm46do9Sa9kWmi2l68xdcfHevy0oGisgNVrIx9QcWH867Ahxd_F-Gc8HH2RddbYcj2rLUqMTgyr0iey2VkOAlfYzD=s1214";
+
+    	let icon_vnoj = "https://blogger.googleusercontent.com/img/a/AVvXsEhF24xJJJSAP1le6ew2i-bajRZwa3_EYw_5agizkGw1iATW3lFZX4abJungQV5dgBpOyoODyzrDXDen1HfRGc_cQ_Aug4HvBx2Tq5worOXUXcZjyIDwieSB4qWN7MzXiJSovVybXxML_jUh9HZRSxX0LCmwV-6wpE2106ofQtoj-umCKd1WMseE9wSE=s60";
+
+    	let icon_w3school = "https://blogger.googleusercontent.com/img/a/AVvXsEilxnYwcorCtMfo4fIhR0sPUwTLErK9k69MhCncTXMlL1HcHeBEn74oB6zWwgzjVqDv5lfpLh7PjS0mspjs71a4Bte9Ki8bL94Hwlw7IkQymePWb9g1cchKxOjPsn4f2r9moUJGlrV7I_hJI-VQ_VnnPZ64dcE39ZFo01C9_CTcEmxG5YTqorq_6wNT=s638";
+
+        let icon_youtube = "https://blogger.googleusercontent.com/img/a/AVvXsEjlTHAvJfmPpYHvz3isVe6sWAW-d_ur0So_KqDd0wSQvZVUSvii4kBS8-kaqwgiANwuJynKNz88I-3hXaj04yLczaBKednTu30HPTDdl62c6Ynsr8R87UIO5FFUAN15flbEPCBX5kD8ybw22Xpv8Rp5cCMfVSQMWnZ5AAZ0nyHMHVjsivpF7W3_PZRr=s512";
+        
+        let icon_ptnk = "https://upload.wikimedia.org/wikipedia/commons/d/d3/PTNK_Logo.jpg";
+        
+        let icon = [icon_favicon, icon_w3school, icon_codeforces, icon_youtube, icon_facebook, icon_gmail, icon_vnoj, icon_lqdoj, icon_ptnk];
+
+        let link = [
+                "http://14.227.5.193:81/",
+                "https://www.w3schools.com/",
+                "https://codeforces.com/contests/",
+                "https://www.youtube.com/",
+                "https://www.facebook.com/",
+                "https://mail.google.com/mail/u/0/#inbox/",
+                "https://oj.vnoi.info/problems/",
+                "https://lqdoj.edu.vn/contests/",
+                "http://programvn.ddns.net/"
+            ];
+
+        document.body.style.backgroundImage = "url('" + icon_rye + "')";
+        document.getElementById("rel-icon").href = icon_book;
+        for (let i = 0; i < icon.length; ++i) {
+            document.getElementById("icon" + i).src = icon[i];
+            document.getElementById("link" + i).href = link[i];
+        }
+
+        let ii = 0;
+        let arr = ["red","lightblue","pink","#00ff00","yellow","rgb(240, 240, 0)","aliceblue"];    
+        setInterval(flicker, 300);
+        function flicker() {
+            ii = (ii + 1) % arr.length;
+            document.getElementById("CColor").style.color = arr[ii];
+        }
+    </script>
+
+</body>
+
+</html>
