@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "FORBIDDEN AREA"
-AuthUserfile ".htpasswd"
-Require valid-user
